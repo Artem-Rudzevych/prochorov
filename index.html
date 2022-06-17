@@ -43,7 +43,7 @@
       </div>
       <div class="container">
         <div class="second-header">
-          <div class="logo">
+          <a href="" alt="" class="logo">
             <img
               class="logo-icon"
               src="./img/Logo.png"
@@ -57,11 +57,13 @@
                 >місце, де народжуеться справедливість</span
               >
             </p>
-          </div>
+          </a>
           <div class="menu">
             <ul class="menu-items">
-              <li class="menu-link"><a href=""></a>Контакти</li>
-              <li class="menu-link"><a href=""></a>Відгуки</li>
+              <li class="menu-box">
+                <a class="menu-link" href="#contact">Контакти</a>
+              </li>
+              <li class="menu-box"><a class="menu-link" href="">Відгуки</a></li>
             </ul>
           </div>
         </div>
@@ -69,20 +71,22 @@
     </header>
     <main>
       <!-- hero -->
-      <section class="hero container">
-        <h1 class="hero-title">
-          Моїм головним завданням є захист інтересів моїх клієнтів на будь-якій
-          стадії процесу і навіть у найскладніших ситуаціях
-        </h1>
-      </section>
       <section>
+        <div class="hero container">
+          <h2 class="hero-title">
+            Моїм головним завданням є захист інтересів моїх клієнтів на
+            будь-якій стадії процесу і навіть у найскладніших ситуаціях
+          </h2>
+        </div>
         <div class="container">
           <div class="sub-flex">
-            <ul class="sub-menu">
-              <li class="sub-link"><p>Про мене</p></li>
-              <li class="sub-link"><p>Послуги</p></li>
-              <li class="sub-link"><p>Ціни</p></li>
-            </ul>
+            <nav>
+              <ul class="sub-menu">
+                <li class="sub-link"><p>Про мене</p></li>
+                <li class="sub-link"><p>Послуги</p></li>
+                <li class="sub-link"><p>Ціни</p></li>
+              </ul>
+            </nav>
             <div class="hero-text">
               <p>Вітаю вас на своєму офіційному сайті</p>
             </div>
@@ -103,11 +107,7 @@
                     можете ознайомитись з моєю біографією у розділі
                     <a
                       href=""
-                      style="
-                        text-decoration: underline;
-                        font-weight: 700;
-                        color: var(--main-text-color);
-                      "
+                      style="text-decoration: underline; font-weight: 700"
                       >“Про мене”</a
                     >
                   </p>
@@ -141,6 +141,65 @@
             </div>
           </div>
         </div>
+      </section>
+      <!-- Услуги -->
+      <section>
+        <div class="container">
+          <h2 class="services-title">Послуги</h2>
+          <h3 class="services-subtitle">Напрямки моеї основної діяльності</h3>
+          <div class="services-cont">
+            <ul class="services-flex">
+              <li class="services">
+                <p class="services-text">Сімейне право</p>
+              </li>
+              <li class="services">
+                <p class="services-text">Кримінальне право</p>
+              </li>
+              <li class="services">
+                <p class="services-text">Житлове право</p>
+              </li>
+              <li class="services">
+                <p class="services-text">Адміністративне право</p>
+              </li>
+              <li class="services">
+                <p class="services-text">Єкономічне право</p>
+              </li>
+              <li class="services">
+                <p class="services-text">Спадкове право</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Адрес -->
+      <section>
+        <address class="address">
+          <div class="container">
+            <h2 class="contact">Контакти</h2>
+            <p class="address-text">Адвокат: Прохоров Олег Александрович</p>
+            <p class="address-text">
+              м. Київ, Оболонський р-н, вул. Маршала Тимошенка, 2/4
+            </p>
+            <p class="address-text">
+              тел./факс <a href="tel:+380444264769">+38044-426-47-69</a> ;
+              <a href="tel:+380979377821">моб. +38097-937-78-21</a>
+            </p>
+            <p class="address-text">
+              <a href="mailto:0979377821@ukr.net">E-mail: 0979377821@ukr.net</a>
+            </p>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.541107281896!2d30.487024037921742!3d50.50549153736921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeddedb7714276795!2z0JDQtNCy0L7QutCw0YIg0L3QsCDQntCx0L7Qu9C-0L3QuCwg0J_RgNC-0YXQvtGA0L7QsiDQntC70LXQsw!5e0!3m2!1sru!2sua!4v1655466780586!5m2!1sru!2sua"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </address>
       </section>
     </main>
   </body>
