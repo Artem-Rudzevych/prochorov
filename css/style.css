@@ -1,4 +1,5 @@
 :root {
+  --main-text-color: #441a05;
   --color-white: #ffffff;
   --background-color: #003986;
 }
@@ -8,7 +9,8 @@ body {
   font-size: 25px;
   font-weight: 700;
 }
-h1 {
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +26,7 @@ button {
   margin: 0;
   outline: none;
 }
+
 /* <svg > <use > </use > </svg >  */
 ul {
   padding: 0;
@@ -182,4 +185,61 @@ li {
 }
 .about-flex {
   display: flex;
+  justify-content: center;
+  padding-top: 39px;
+}
+.about-list {
+  display: flex;
+  align-items: center;
+}
+.about-list.second {
+  align-items: baseline;
+}
+.about-item {
+  padding-top: 27px;
+  font-size: 42px;
+  line-height: 1.14;
+  text-decoration-line: underline;
+  text-align: center;
+  color: var(--main-text-color);
+}
+.about-text {
+  padding: 33px 30px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.24;
+  letter-spacing: -0.015em;
+
+  color: var(--main-text-color);
+}
+.about {
+  margin-right: 76px;
+  width: 566px;
+  height: 311px;
+  background: rgba(255, 253, 253, 0.99);
+  border: 1px solid var(--color-white);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+.about:nth-child(2) {
+  margin-right: 0;
+}
+.about-img {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  object-fit: none;
+}
+
+.about-box {
+  width: 315px;
+  height: 212px;
+  background: rgba(252, 183, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.about-box:not(:last-child) {
+  margin-right: 76px;
+}
+.about-box:nth-child(2) {
+  width: 428px;
+  height: 242px;
 }
