@@ -84,7 +84,7 @@ li {
 .header-flex {
   display: flex;
   margin-left: auto;
-  margin-right: 15%;
+  margin-right: auto;
 }
 .header-li {
   display: flex;
