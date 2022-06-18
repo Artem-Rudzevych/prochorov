@@ -179,6 +179,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-color: var(--background-color);
 }
 .header-icon {
@@ -508,4 +509,5 @@ li {
 }
 .map {
   padding-top: 25px;
+  width: 100%;
 }
