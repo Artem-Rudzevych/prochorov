@@ -15,6 +15,7 @@ body {
   font-style: normal;
   font-size: 25px;
   font-weight: 700;
+  color: var(--main-text-color);
 }
 .visually-hidden {
   position: absolute;
@@ -64,6 +65,16 @@ button {
   border-radius: 50%;
   cursor: pointer;
   z-index: 9;
+}
+.copy {
+  padding: 10px 0;
+  color: #ffffff;
+  font-size: 16px;
+
+  margin-right: 2px;
+}
+.copy-ul {
+  display: flex;
 }
 #topNubex:hover {
   transform: scale(1.1);
@@ -230,6 +241,7 @@ li {
 .header-li {
   display: flex;
   padding: 6px 0;
+  color: var(--color-white);
 }
 .header-flex .header-li:not(:last-child) {
   margin-right: 63px;
@@ -507,7 +519,74 @@ li {
   text-align: center;
   color: var(--main-text-color);
 }
+.qr {
+  bottom: 40px;
+  right: 40px;
+}
 .map {
   padding-top: 25px;
   width: 100%;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Price */
+.price-title {
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid var(--background-color);
+}
+.price-text {
+  padding: 0px 40px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.24;
+  letter-spacing: -0.015em;
+
+  color: var(--main-text-color);
+}
+/* Table */
+.cap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 10%;
+  font-size: 25px;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.iksweb th {
+  font-weight: 700;
+  font-size: 25px;
+  text-align: left;
+  color: var(--main-text-color);
+}
+.iksweb {
+  display: flex;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  width: 70%;
+  text-align: left;
+  font-size: 18px;
+  color: var(--main-text-color);
+  margin-left: auto;
+  margin-right: auto;
+}
+.iksweb td:nth-child(2n) {
+  width: 150px;
+}
+.iksweb tr {
+  transform: scale(1);
+  transition: transform 200ms linear;
+}
+.iksweb td .iksweb th {
+  padding: 10px 5px;
+  line-height: 13px;
+}
+.iksweb tr:hover {
+  background-color: rgba(189, 185, 185, 0.163);
+  transform: scale(1.1);
 }

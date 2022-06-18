@@ -4,10 +4,12 @@ $('.anсhor').click(function(e){
 	e.preventDefault();
 	window.location.hash = '';
 	var offset = $(anch).offset();
-	$("html, body").animate({scrollTop:$(anch).offset().top},100);
+	$("html, body").animate({scrollTop:$(anch).offset().top},500);
 	if(history.pushState) { history.pushState({}, null, window.location.pathname); }
 });
 
+
+// history.pushState('', document.title, window.location.pathname);
 
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
