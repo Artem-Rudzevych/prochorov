@@ -584,6 +584,7 @@ li {
   width: 150px;
 }
 .iksweb tr {
+  cursor: default;
   transform: scale(1);
   transition: transform 200ms linear, background-color 300ms linear;
 }
