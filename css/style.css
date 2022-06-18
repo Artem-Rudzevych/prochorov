@@ -5,12 +5,28 @@
   --hover-link-color: #ffe901;
   --hover-bg-color: rgba(68, 26, 5, 0.9);
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --about-bg-color: rgba(252, 183, 0, 0.75);
+}
+#contact {
+  margin: 0 0;
 }
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 25px;
   font-weight: 700;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 h1,
 h2,
@@ -31,6 +47,26 @@ button {
   padding: 0;
   margin: 0;
   outline: none;
+}
+#topNubex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--about-bg-color);
+  fill: var(--main-text-color);
+  transform: scale(1);
+  transition: transform 200ms linear;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9;
+}
+#topNubex:hover {
+  transform: scale(1.1);
 }
 /* Modal */
 .backdrop.is-hidden {
@@ -120,6 +156,7 @@ button {
   transform: scale(1.1);
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.5);
 }
+
 /* <svg > <use > </use > </svg >  */
 ul {
   padding: 0;
@@ -277,9 +314,10 @@ li {
   margin-right: 12px;
   cursor: pointer;
   transform: scale(1);
-  transition: transform 300ms linear, box-shadow 300ms linear,
-    background-color 300ms linear;
+  transition: transform 250ms linear, box-shadow 250ms linear,
+    background-color 250ms linear;
 }
+
 .sub-link:hover,
 .sub-link:focus {
   background-color: var(--main-text-color);
@@ -354,7 +392,7 @@ li {
 }
 
 .about-box {
-  background: rgba(252, 183, 0, 0.75);
+  background: var(--about-bg-color);
   border-radius: 20px;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
 }
@@ -421,6 +459,16 @@ li {
   background: var(--main-text-color);
   box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  transform: scale(1);
+  transition: transform 250ms linear, box-shadow 250ms linear,
+    background-color 250ms linear;
+  cursor: pointer;
+}
+.services:hover,
+.services:focus {
+  background-color: var(--main-text-color);
+  box-shadow: -8px 8px 6px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }
 .services:nth-child(3n) {
   margin-right: 0;
@@ -434,6 +482,7 @@ li {
 .services-flex {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 102px;
 }
 .address {
   font-size: 25px;
@@ -442,8 +491,15 @@ li {
   font-weight: 700;
   color: var(--main-text-color);
 }
+.address a {
+  transform: scale(1);
+  transition: color 150ms linear, transform 150ms linear;
+}
+.address a:hover {
+  color: var(--hover-link-color);
+  transform: scale(1.03);
+}
 .contact {
-  padding-top: 102px;
   padding-bottom: 20px;
   font-size: 45px;
   line-height: 52px;

@@ -16,6 +16,9 @@ const refs = {
   function logBackdropClick() {
     console.log("Это клик в бекдроп");
   }
+  
+
+
 
   
   
