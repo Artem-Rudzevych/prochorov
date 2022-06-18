@@ -1,17 +1,3 @@
-$('.anсhor').click(function(e){
-	var anch = this.hash.slice(0);
-	if(!anch || !anch[0] === "#") return;
-	e.preventDefault();
-	window.location.hash = '';
-	var offset = $(anch).offset();
-	$("html, body").animate({scrollTop:$(anch).offset().top},500);
-	if(history.pushState) { history.pushState({}, null, window.location.pathname); }
-});
-
-
-// history.pushState('', document.title, window.location.pathname);
-
-// Button
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
     if (self.pageYOffset) return self.pageYOffset;
@@ -49,3 +35,18 @@ function elmYPosition(eID) {
   });
   });
   
+// var smoothJumpUp = function() {
+//     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+//         window.scrollBy(0,-50);
+//         setTimeout(smoothJumpUp, 10);
+//     }
+// }
+
+// window.onscroll = function() {
+//   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+//   if (scrolled > 100) {
+//       document.getElementById('topNubex').style.display = 'block';
+//   } else {
+//       document.getElementById('topNubex').style.display = 'none';
+//   }
+// }
