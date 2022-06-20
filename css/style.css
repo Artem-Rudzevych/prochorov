@@ -306,7 +306,7 @@ li {
   color: rgba(68, 26, 5, 0.8);
   text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
   margin-left: auto;
-  margin-right: 23px;
+  margin-right: 268px;
   padding: 95px 0px;
 }
 .sub-menu {
@@ -449,7 +449,6 @@ li {
   line-height: 57px;
   text-align: center;
   text-decoration-line: underline;
-
   color: var(--main-text-color);
 }
 .services-subtitle {
@@ -457,21 +456,36 @@ li {
   font-size: 25px;
   line-height: 29px;
   text-align: center;
-
   color: var(--main-text-color);
 }
-.services-text {
-  font-size: 25px;
+
+.card-text {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  margin: 0;
+  padding: 0px 24px;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
   line-height: 29px;
   text-align: center;
   color: var(--color-white);
-  text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
+  transform: translateY(100%);
 }
 .services {
   width: calc((100% - 2 * 60px) / 3);
-  padding: 62px 0px;
   margin-right: 60px;
-  margin-bottom: 74px;
+  margin-bottom: 90px;
+}
+.serv-thumb {
+  /* position: relative; */
+}
+.serv-button {
+  padding: 62px 0px;
+  width: 350px;
+  color: var(--color-white);
+  text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
   background: var(--main-text-color);
   box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -480,8 +494,8 @@ li {
     background-color 250ms linear;
   cursor: pointer;
 }
-.services:hover,
-.services:focus {
+.serv-button:hover,
+.serv-button:focus {
   background-color: var(--main-text-color);
   box-shadow: -8px 8px 6px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
