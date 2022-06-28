@@ -1,0 +1,39 @@
+:root {
+  --main-text-color: #441a05;
+  --color-white: #ffffff;
+  --background-color: #003986;
+  --hover-link-color: #ffe901;
+  --hover-bg-color: rgba(68, 26, 5, 0.9);
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --about-bg-color: rgba(252, 183, 0, 0.75);
+}
+.copy {
+  padding: 10px 0;
+  color: #ffffff;
+  font-size: 16px;
+
+  margin-right: 2px;
+}
+.copy-ul {
+  display: flex;
+}
+.topNubex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--about-bg-color);
+  fill: var(--main-text-color);
+  transform: scale(1);
+  transition: transform 200ms linear;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+#topNubex:hover {
+  transform: scale(1.1);
+}

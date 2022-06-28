@@ -1,0 +1,30 @@
+.address {
+    font-size: 25px;
+    line-height: 29px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--main-text-color);
+  }
+  .address a {
+    transform: scale(1);
+    transition: color 150ms linear, transform 150ms linear;
+  }
+  .address a:hover {
+    color: var(--hover-link-color);
+    transform: scale(1.03);
+  }
+  .contact {
+    padding-bottom: 20px;
+    font-size: 45px;
+    line-height: 52px;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+  .qr {
+    bottom: 40px;
+    right: 40px;
+  }
+  .map {
+    padding-top: 25px;
+    width: 100%;
+  }
