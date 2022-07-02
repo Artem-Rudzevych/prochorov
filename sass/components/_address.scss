@@ -15,15 +15,14 @@
   }
   .contact {
     padding-bottom: 20px;
-    font-size: 45px;
-    line-height: 52px;
-    text-align: center;
-    color: var(--main-text-color);
+    font-size: 30px;
+      line-height: 37px;
+      text-align: center;
+      text-decoration: underline;
+      color: var(--main-text-color);
+      padding-top: 30px;
   }
-  .qr {
-    bottom: 40px;
-    right: 40px;
-  }
+ 
   .map {
     padding-top: 25px;
     width: 100%;

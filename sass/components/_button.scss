@@ -26,7 +26,8 @@
 }
 .serv-button {
   padding: 62px 0px;
-  width: 350px;
+  max-width: 450px;
+  width: 100%;
   color: var(--color-white);
   text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
   background: var(--main-text-color);
