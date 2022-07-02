@@ -24,8 +24,8 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 40px;
-  bottom: 40px;
+  right: 15px;
+  bottom: 15px;
   width: 60px;
   height: 60px;
   background-color: var(--about-bg-color);
@@ -39,6 +39,53 @@
 
 #topNubex:hover {
   transform: scale(1.1);
+}
+
+.first-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.header-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.second-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-flex {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-li {
+  display: flex;
+  padding: 6px 0;
+  color: var(--color-white);
+}
+
+.header-flex .header-li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-flex a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.035em;
+  transition: color 250ms var(--cubic-bezier);
 }
 
 .mod-button:hover,
@@ -90,6 +137,32 @@
   background-color: var(--main-text-color);
   box-shadow: -8px 8px 6px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
+}
+
+.menu__button {
+  z-index: 10;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.menu__button:hover, .menu__button:focus {
+  fill: var(--hover-text-color);
+}
+
+.menu__button.is-open .menu__icon {
+  display: none;
+}
+
+.menu__button .menu__icon--close {
+  display: none;
+}
+
+.menu__button.is-open .menu__icon--close {
+  display: block;
 }
 
 .header-flex a:hover,
@@ -166,6 +239,28 @@
 
 .sub-flex {
   display: none;
+}
+
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: var(--color-white);
+  padding: 30px;
+  transform: translatex(100%);
+  transition: transform 250ms linear;
+}
+
+.mobile__menu.is-open {
+  transform: translatex(40%);
+}
+
+.mobile__menu-link:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 /* Modal */
@@ -335,52 +430,6 @@ li {
   padding-right: 15px;
 }
 
-.first-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: var(--background-color);
-}
-
-.header-icon {
-  fill: currentColor;
-  margin-right: 10px;
-}
-
-.second-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-flex {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header-li {
-  display: flex;
-  padding: 6px 0;
-  color: var(--color-white);
-}
-
-.header-flex .header-li:not(:last-child) {
-  margin-right: 30px;
-}
-
-.header-flex a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.15;
-  letter-spacing: 0.035em;
-  transition: color 250ms var(--cubic-bezier);
-}
-
 .hero {
   max-width: 1920px;
   margin-left: auto;
@@ -543,14 +592,6 @@ li {
   /* position: relative; */
 }
 
-.services:nth-child(3n) {
-  margin-right: 0;
-}
-
-.services:nth-last-child(-n+3) {
-  margin-bottom: 0;
-}
-
 .services-cont {
   padding: 0px 15px;
 }
@@ -566,8 +607,8 @@ li {
 }
 
 .address {
-  font-size: 25px;
-  line-height: 29px;
+  font-size: 22px;
+  line-height: 27px;
   font-style: normal;
   font-weight: 700;
   color: var(--main-text-color);
@@ -696,6 +737,23 @@ li {
   .logo-text-small {
     font-size: 12px;
   }
+
+  .second-header {
+    align-items: center;
+  }
+
+  .services:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+
+  .mobile__menu {
+    display: none;
+  }
 }
 @media screen and (min-width: 1366px) {
   .hero {
@@ -756,6 +814,14 @@ li {
     margin-bottom: 90px;
   }
 
+  .services:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .services:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+
   .serv-button {
     padding: 62px 0px;
     width: 350px;
@@ -792,5 +858,14 @@ li {
     padding-top: 15px;
     transform: scale(1);
     transition: transform 250ms linear;
+  }
+
+  .header-flex a {
+    font-size: 18px;
+  }
+
+  .address {
+    font-size: 25px;
+    line-height: 29px;
   }
 }/*# sourceMappingURL=main.css.map */

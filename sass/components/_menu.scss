@@ -68,3 +68,25 @@
     display: none;
     
   }
+  .mobile__menu{
+    position: fixed;
+      top: 0;
+      right: 0;
+      display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: var(--color-white);
+        padding: 30px;
+    transform: translatex(100%);
+    transition: transform 250ms linear;
+    
+  }
+    .mobile__menu.is-open {
+      transform: translatex(40%);
+    }
+        .mobile__menu-link{
+          &:not(:last-child){
+            margin-bottom: 15px;
+          }
+        }

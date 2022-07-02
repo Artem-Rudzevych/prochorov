@@ -44,3 +44,31 @@
   box-shadow: -8px 8px 6px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
+.menu__button {
+  z-index: 10;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 10px 0px;
+  padding: 0;
+  border: none;
+  background: none;
+
+  &:hover,
+  &:focus {
+    fill: var(--hover-text-color);
+  }
+}
+
+.menu__button.is-open .menu__icon {
+  display: none;
+
+}
+
+.menu__button .menu__icon--close {
+  display: none;
+}
+
+.menu__button.is-open .menu__icon--close {
+  display: block;
+}
