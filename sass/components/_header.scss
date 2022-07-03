@@ -1,4 +1,5 @@
 .first-header {
+  position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,8 +11,8 @@
     margin-right: 10px;
   }
   .second-header {
-    position: relative;
     
+    // overflow: hidden;
     display: flex;
     justify-content: space-between;
   }

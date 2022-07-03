@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,22 +64,13 @@
               >
             </p>
           </a>
-          <button data-menu-button class="menu__button" type="button">
-            <svg width="40" height="40">
-              <use class="menu__icon" href="./img/icons.svg#menu"></use>
-              <use
-                class="menu__icon--close"
-                href="./img/icons.svg#menu-close"
-              ></use>
-            </svg>
-          </button>
 
-          <ul data-menu class="mobile__menu">
-            <li class="mobile__menu-link"><a href="#contact">Контакти</a></li>
+          <ul data-menu class="mobile__menu" aria-label="Мобільне меню">
             <li class="mobile__menu-link"><a href="">Відгуки</a></li>
-            <li class="mobile__menu-link"><a href="">Ціни</a></li>
-            <li class="mobile__menu-link"><a href="">Про мене</a></li>
-            <li class="mobile__menu-link"><a href="">Послуги</a></li>
+            <li class="mobile__menu-link"><a href="./price.html">Ціни</a></li>
+            <li class="mobile__menu-link">
+              <a href="./about.html">Про мене</a>
+            </li>
           </ul>
 
           <div class="menu">
@@ -97,6 +88,15 @@
               </li>
             </ul>
           </div>
+          <button data-menu-button class="menu__button" type="button">
+            <svg width="40" height="40">
+              <use class="menu__icon" href="./img/icons.svg#menu"></use>
+              <use
+                class="menu__icon--close"
+                href="./img/icons.svg#menu-close"
+              ></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>

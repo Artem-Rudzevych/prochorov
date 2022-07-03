@@ -42,6 +42,7 @@
 }
 
 .first-header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +56,6 @@
 }
 
 .second-header {
-  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -242,21 +242,25 @@
 }
 
 .mobile__menu {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 109px;
   right: 0;
-  display: block;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  height: 100%;
+  opacity: 0;
   z-index: 2;
   background-color: var(--color-white);
   padding: 30px;
-  transform: translatex(100%);
-  transition: transform 250ms linear;
+  transform: translatey(-100%);
+  transition: transform 150ms linear 100ms, opacity 200ms linear 100ms;
+  pointer-events: none;
 }
 
 .mobile__menu.is-open {
-  transform: translatex(40%);
+  pointer-events: all;
+  opacity: 1;
+  transform: translatey(0%);
 }
 
 .mobile__menu-link:not(:last-child) {
@@ -725,8 +729,17 @@ li {
     display: none;
   }
 
-  .qr {
-    display: none;
+  .second-header {
+    align-items: center;
+  }
+
+  .services:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .second-header {
+    align-items: center;
   }
 
   .logo-icon {
@@ -738,15 +751,48 @@ li {
     font-size: 12px;
   }
 
-  .second-header {
-    align-items: center;
+  .menu-box:not(:last-child) {
+    margin-right: 15px;
   }
 
-  .services:not(:last-child) {
-    margin-bottom: 10px;
+  .menu-link {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 8px 20px;
+  }
+
+  .services:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .services:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  .qr {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {
+  .services-flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    justify-content: center;
+  }
+
+  .services {
+    width: calc((100% - 60px) / 2);
+    margin-right: 30px;
+    margin-bottom: 60px;
+  }
+
+  .serv-button {
+    padding: 45px 0px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1366px) {
   .menu__button {
     display: none;
   }
@@ -754,8 +800,7 @@ li {
   .mobile__menu {
     display: none;
   }
-}
-@media screen and (min-width: 1366px) {
+
   .hero {
     background-image: url(../../img/hero2.jpg);
   }
@@ -825,6 +870,7 @@ li {
   .serv-button {
     padding: 62px 0px;
     width: 350px;
+    font-size: 25px;
     color: var(--color-white);
     text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
     background: var(--main-text-color);
