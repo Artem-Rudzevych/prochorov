@@ -383,6 +383,10 @@ body {
   color: var(--main-text-color);
 }
 
+img {
+  display: block;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -496,31 +500,34 @@ li {
   color: var(--main-text-color);
 }
 
-.about-text {
+.about-text--mini {
   padding: 33px 30px;
   font-weight: 500;
-  font-size: 25px;
-  line-height: 1.24;
+  font-size: 24px;
+  line-height: 1.4;
   letter-spacing: -0.015em;
   color: var(--main-text-color);
 }
 
 .about {
-  margin-right: 76px;
+  margin-right: 60px;
   width: 566px;
   height: 311px;
   background: rgba(255, 253, 253, 0.99);
   border: 1px solid var(--color-white);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
+  border-radius: 5px;
 }
 
 .about:nth-child(2) {
   margin-right: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
 }
 
 .about-img {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about-box {
@@ -545,6 +552,10 @@ li {
 .about-box:nth-child(2) .second-text {
   font-size: 38px;
   padding: 0px 20px 15px;
+}
+
+.about-flex-cont {
+  display: flex;
 }
 
 .second-title {
@@ -659,7 +670,7 @@ li {
   padding: 0px 40px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 1.5;
   letter-spacing: -0.015em;
   color: var(--main-text-color);
 }
@@ -688,7 +699,7 @@ li {
   padding-bottom: 50px;
   width: 70%;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--main-text-color);
   margin-left: auto;
   margin-right: auto;
@@ -857,6 +868,10 @@ li {
     padding: 45px 0px;
     font-size: 18px;
   }
+
+  .iksweb {
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 1366px) {
   .menu__button {
@@ -992,5 +1007,9 @@ li {
   .price-text,
 .about-text {
     font-size: 22px;
+  }
+
+  .iksweb {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
