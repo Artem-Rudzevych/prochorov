@@ -988,4 +988,9 @@ li {
     font-size: 25px;
     line-height: 29px;
   }
+
+  .price-text,
+.about-text {
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=main.css.map */
