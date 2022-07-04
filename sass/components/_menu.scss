@@ -69,12 +69,12 @@
       top: 109px;
       right: 0;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
         width: 100%;
         opacity: 0;
         z-index: 2;
         background-color: var(--color-white);
-        padding: 30px;
+        padding: 30px 15px;
         
     transform: translatey(-100%);
     transition: transform 150ms linear 100ms, opacity 200ms linear 100ms  ;
@@ -87,7 +87,14 @@
       transform: translatey(0%);
     }
         .mobile__menu-link{
+          margin-bottom: 15px;
+          
           &:not(:last-child){
-            margin-bottom: 15px;
+           border-right: 1px solid;
+           padding-right: 10px;
+          
           }
-        }
+        &:not(:first-child){
+padding-left: 10px;
+        }}
+        

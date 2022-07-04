@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    
     <div style="display: none;" id="topNubex" class="topNubex"><svg width="30" height="30" class="top-flex"><use href="./img/icons.svg#arrow"></use></svg></div>
-    <header>
+     <header>
       <div class="first-header">
         <ul class="header-flex">
           <li class="header-li">
@@ -60,20 +60,29 @@
               >
             </p>
           </a>
+           <ul data-menu class="mobile__menu" aria-label="Мобільне меню">
+            <li class="mobile__menu-link"><a href="">Відгуки</a></li>
+            <li class="mobile__menu-link"><a href="./index.html">Головна</a></li>
+            <li class="mobile__menu-link">
+              <a href="./price.html">Ціни</a>
+            </li>
+          </ul>
           <div class="menu">
             <ul class="menu-items">
               <li class="menu-box">
                 <a class="menu-link" href="./index.html">Головна</a>
               </li>
               <li class="menu-box">
-                <a class="menu-link" href="./price.html">Ціни</a>
+                <a class="menu-link menu-link--hiden" href="./about.html">Про мене</a>
               </li>
               <li class="menu-box">
-                <a class="menu-link anсhor" href="#contact">Контакти</a>
+                <a class="menu-link anсhor" href="#contact"
+                  >Контакти</a
+                >
               </li>
               <li class="menu-box">
                 <a
-                  class="menu-link"
+                  class="menu-link menu-link--hiden"
                   href="https://www.google.com/search?q=%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D1%80%D0%BE%D0%B2+%D0%BE%D0%BB%D0%B5%D0%B3+%D0%B0%D0%B4%D0%B2%D0%BE%D0%BA%D0%B0%D1%82&oq=%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D1%80%D0%BE%D0%B2+%D0%BE%D0%BB%D0%B5%D0%B3+%D0%B0%D0%B4%D0%B2%D0%BE%D0%BA%D0%B0%D1%82&aqs=chrome..69i57j0i22i30j69i61l2.12801j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40d4d20cce8d7c93:0xeddedb7714276795,1,,,"
                   target="_blank"
                   >Відгуки</a
@@ -81,15 +90,26 @@
               </li>
             </ul>
           </div>
+          <button data-menu-button class="menu__button" type="button">
+            <svg width="40" height="40">
+              <use class="menu__icon" href="./img/icons.svg#menu"></use>
+              <use
+                class="menu__icon--close"
+                href="./img/icons.svg#menu-close"
+              ></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section>
+        <div class="border"></div>
         <div class="container">
+          
           <h1 class="price-title services-title">Про мене</h1>
-          <p class="price-text">
-                            <img 
+          <p class="about-text">
+                            <img class="about-img"
                 src="./img/oleg2.jpg"
                   width="271"
                   alt=""
@@ -140,6 +160,55 @@
         </div>
       </section>
     </main>
+    <footer>
+        <!-- Адрес -->
+      <section>
+        <address class="address">
+            <div class="container">
+  
+              
+              <h2 id="contact" class="contact">Контакти</h2>
+              <div class="footer">
+                <div>
+              <p class="address-text">Адвокат: Прохоров Олег Александрович</p>
+              <p class="address-text">
+                м. Київ, Оболонський р-н, вул. Маршала Тимошенка, 2/4
+              </p>
+              <p class="address-text">
+                тел./факс <a href="tel:+380444264769">+38044-426-47-69</a> ;
+                моб. <a href="tel:+380979377821">+38097-937-78-21</a>
+              </p>
+              <p class="address-text">
+                E-mail: <a href="mailto:0979377821@ukr.net">0979377821@ukr.net</a>
+              </p>
+            </div>
+              <div class="qr"><img src="./img/qr.png" width="232" alt=""></div>
+            </div>
+            </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.541107281896!2d30.487024037921742!3d50.50549153736921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeddedb7714276795!2z0JDQtNCy0L7QutCw0YIg0L3QsCDQntCx0L7Qu9C-0L3QuCwg0J_RgNC-0YXQvtGA0L7QsiDQntC70LXQsw!5e0!3m2!1sru!2sua!4v1655466780586!5m2!1sru!2sua"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </address>
+        <div class="first-header">
+            <ul class="copy-ul">
+              <li class=" copy">
+                <p >&#169; 2008-2022 р.</p>
+              </li>
+              <li class=" copy"><p>Сайт розроблено за підтримки <a href="">BigBull Developer</a></p></li>
+            </ul>
+          </div>
+    </footer>
+    <script src="./js/jslib.js"></script>
     <script src="./js/link.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    
   </body>
 </html>

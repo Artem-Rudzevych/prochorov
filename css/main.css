@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-text-color: #441a05;
   --color-white: #ffffff;
@@ -39,6 +40,71 @@
 
 #topNubex:hover {
   transform: scale(1.1);
+}
+
+/* Стили для подложки */
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transform: scale(0.7);
+}
+
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.2);
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 30;
+  /* Должен быть выше чем у подложки*/
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стили для активных классов подложки и окна */
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: opacity 250ms linear;
+}
+
+/* Стили для кнопки закрытия */
+.modal__cross {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
 }
 
 .first-header {
@@ -240,12 +306,12 @@
   top: 109px;
   right: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   opacity: 0;
   z-index: 2;
   background-color: var(--color-white);
-  padding: 30px;
+  padding: 30px 15px;
   transform: translatey(-100%);
   transition: transform 150ms linear 100ms, opacity 200ms linear 100ms;
   pointer-events: none;
@@ -257,70 +323,15 @@
   transform: translatey(0%);
 }
 
-.mobile__menu-link:not(:last-child) {
+.mobile__menu-link {
   margin-bottom: 15px;
 }
-
-/* Modal */
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+.mobile__menu-link:not(:last-child) {
+  border-right: 1px solid;
+  padding-right: 10px;
 }
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  transition: opacity 250ms var(--cubic-bezier);
-  z-index: 10;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.2);
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  min-width: 900px;
-  min-height: 400px;
-  background-color: var(--color-white);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 10;
-  transition: transform 400ms var(--cubic-bezier);
-}
-
-.mod-text {
-  padding: 30px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 1.1;
-}
-
-/* .modal-second {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 1200px;
-  min-height: 581px;
-  background-color: var(--color-white);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 10;
-  transition: transform 400ms var(--cubic-bezier);
-} */
-.modal-icon {
-  fill: currentColor;
+.mobile__menu-link:not(:first-child) {
+  padding-left: 10px;
 }
 
 .logo {
@@ -428,6 +439,10 @@ li {
   padding-right: 15px;
 }
 
+.border {
+  border-top: 1px solid var(--background-color);
+}
+
 .hero {
   max-width: 1920px;
   margin-left: auto;
@@ -505,9 +520,7 @@ li {
 }
 
 .about-img {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  -o-object-fit: none;
-     object-fit: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 .about-box {
@@ -640,10 +653,9 @@ li {
 .price-title {
   padding: 30px 0;
   text-align: center;
-  border-top: 1px solid var(--background-color);
 }
 
-.price-text {
+.price-text, .about-text {
   padding: 0px 40px;
   font-weight: 500;
   font-size: 20px;
@@ -719,6 +731,23 @@ li {
 }
 
 @media screen and (max-width: 767px) {
+  .about-text {
+    padding: 0;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .iksweb {
+    display: initial;
+    font-size: 14px;
+  }
+
+  .iksweb th {
+    font-size: 20px;
+  }
+
   .menu {
     display: none;
   }
@@ -783,20 +812,24 @@ li {
     margin-right: 0;
   }
 
-  .services:nth-last-child(-n+2) {
-    margin-bottom: 0;
-  }
-
   .qr {
     display: none;
   }
 
-  .price-text {
+  .price-text, .about-text {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
 @media screen and (min-width: 768px) {
+  .mobile__menu {
+    justify-content: flex-end;
+  }
+
+  .services:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
   .hero {
     background-image: url(../img/hero-tab.jpg);
   }
@@ -880,7 +913,6 @@ li {
     text-align: center;
     text-decoration: underline;
     color: var(--main-text-color);
-    padding-top: 0;
   }
 
   .services-subtitle {

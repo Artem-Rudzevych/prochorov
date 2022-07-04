@@ -17,9 +17,25 @@
 
 // Menu
 @media screen and (max-width: 767px){
+    
+    .about-text{
+        padding: 0;
+        
+    }
+    .about-img{
+        display: none;
+    }
+    .iksweb{
+        display: initial;
+        font-size: 14px;
+    }
+        .iksweb th{
+            font-size: 20px;
+        }
 .menu{
     display: none;
 }
+
 .price-text{
     display: none;
 }
@@ -77,20 +93,24 @@
       margin-right: 0;
   }
 
-  .services:nth-last-child(-n + 2) {
-      margin-bottom: 0;
-  }
+ 
   .qr {
       display: none;
   }
-   .price-text {
+   .price-text, .about-text {
        font-size: 16px;
-       line-height: 1.2;
+       line-height: 1.5;
        
    }
 
 }
 @media screen and (min-width: 768px){
+    .mobile__menu {
+            justify-content: flex-end;
+        }
+    .services:nth-last-child(-n + 2) {
+            margin-bottom: 0;
+        }
     .hero{
         background-image: url(../img/hero-tab.jpg);
     }
@@ -171,7 +191,7 @@
          text-align: center;
          text-decoration: underline;
          color: var(--main-text-color);
-        padding-top: 0;
+        
         }
     .services-subtitle {
         padding: 43px 0;
