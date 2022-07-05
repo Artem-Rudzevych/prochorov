@@ -419,7 +419,7 @@ img {
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.5);
 }
 
-.messenger:hover, .messenger:focus {
+.messenger:hover, .messenger-telegram:hover {
   transform: scale(1.1);
 }
 
@@ -496,7 +496,7 @@ li {
   background-position-y: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/hero-mob.jpg);
+  background-image: url(../img/hero-mob.webp);
 }
 
 .hero-title {
@@ -528,7 +528,7 @@ li {
 
 .about-list.second {
   align-items: end;
-  padding-bottom: 97px;
+  padding-bottom: 50px;
 }
 
 .about-title {
@@ -915,7 +915,7 @@ li {
   }
 
   .hero {
-    background-image: url(../img/hero-tab.jpg);
+    background-image: url(../img/hero-tab.webp);
   }
 
   .sub-flex {
@@ -956,7 +956,7 @@ li {
   }
 
   .hero {
-    background-image: url(../img/hero2.jpg);
+    background-image: url(../img/hero.webp);
   }
 
   .hero-title {
@@ -992,7 +992,7 @@ li {
   .services-flex {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 102px;
+    padding-bottom: 60px;
   }
 
   .services-title {
