@@ -7,6 +7,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/hero-mob.webp);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../img/hero-mob-2x.webp);
+      }
     
    
   }

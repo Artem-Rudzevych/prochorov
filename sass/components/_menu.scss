@@ -1,7 +1,9 @@
-.header-flex a:hover,
-.header-flex a:focus {
+.header-li:hover,
+.header-li:focus {
+  & a{
   color: var(--hover-link-color);
-}
+  
+}}
 .menu-items a:hover,
 .menu-items a:focus {
   transform: scale(1.1);

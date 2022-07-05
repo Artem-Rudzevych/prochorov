@@ -71,6 +71,9 @@ width: 50px;
 }
 }
 @media screen and (max-width: 1365px){
+    .header-li{
+        padding: 20px 0;
+    }
     .menu{
         margin-left: auto;
     }
@@ -131,6 +134,12 @@ width: 50px;
         }
     .hero{
         background-image: url(../img/hero-tab.webp);
+        @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../img/hero-tab-2x.webp);
+            }
     }
  .sub-flex {
      display: flex;
@@ -175,6 +184,12 @@ width: 50px;
         }
     .hero{
         background-image: url(../img/hero.webp);
+        @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx){
+                background-image: url(../img/hero2.webp);
+            }
     }
     .hero-title{
         width: 700px;

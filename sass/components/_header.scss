@@ -26,6 +26,7 @@
     display: flex;
     padding: 6px 0;
     color: var(--color-white);
+    cursor: pointer;
   }
   .header-flex .header-li:not(:last-child) {
     margin-right: 30px;
@@ -35,8 +36,8 @@
     align-items: center;
     text-decoration: none;
     color: var(--color-white);
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.035em;
     transition: color 250ms var(--cubic-bezier);
