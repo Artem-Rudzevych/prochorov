@@ -17,7 +17,21 @@
 
 // Menu
 @media screen and (max-width: 767px){
-    
+    .topNubex {
+        width: 50px;
+        height: 50px;
+    }
+    .messenger{
+        display: none;
+    }
+        .messenger-icon{
+width: 50px;
+    height: 50px;
+        }
+    .header-icon{
+        width: 10px;
+        height: auto;
+    }
     .about-text{
         padding: 0;
         
@@ -145,6 +159,9 @@
 
 
 @media screen and (min-width: 1366px){
+    .messenger-mob {
+            display: none;
+        }
     .menu__button {
             display: none;
         }

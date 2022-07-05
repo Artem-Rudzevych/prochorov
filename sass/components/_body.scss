@@ -12,6 +12,38 @@
   img{
     display: block;
   }
+  .messenger{
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      right: 15px;
+      bottom: 85px;
+      cursor: pointer;
+        z-index: 2;
+        border-radius: 50%;
+    }
+  .messenger-mob{
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      right: 15px;
+      bottom: 85px;
+      cursor: pointer;
+      z-index: 2;
+      border-radius: 50%;
+  }
+  .messenger-icon{
+width: 60px;
+  height: 60px;
+  // background-color: var(--about-bg-color);
+  // fill: var(--main-text-color);
+  transform: scale(1);
+  transition: transform 200ms linear;
+  
+ 
+  }
   .visually-hidden {
     position: absolute;
     width: 1px;
