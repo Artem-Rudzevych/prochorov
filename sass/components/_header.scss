@@ -1,10 +1,20 @@
-.first-header {
-  position: relative;
+.head-contact{
+  
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    background-color: var(--background-color);
+    
+}
+.section-header{
+width: 100%;
+  background-color: var(--background-color);
+}
+.first-header {
+  position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
   }
   .header-icon {
     fill: currentColor;
@@ -19,8 +29,7 @@
   
   .header-flex {
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+   
   }
   .header-li {
     display: flex;

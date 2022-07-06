@@ -44,58 +44,57 @@
   transform: scale(1.1);
 }
 
-/* Стили для подложки */
 .overlay {
-  /* Скрываем подложку  */
   opacity: 0;
   visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 20;
   transform: scale(0.7);
+  overflow-y: scroll;
+  pointer-events: none;
 }
 
-/* Стили для модальных окон */
 .modal {
-  /* Скрываем окна  */
+  position: absolute;
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, -50%) scale(0.2);
-  /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 500px;
-  /*  Центрируем и задаем z-index */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 30;
-  /* Должен быть выше чем у подложки*/
-  /*  Побочные стили   */
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 30px;
+  padding: 50px 20px;
   border-radius: 3px;
   background-color: #fff;
-  transition: 0.3s all;
+  z-index: 12;
+}
+
+.modal__title {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.3;
+  z-index: 13;
 }
 
 /* Стили для активных классов подложки и окна */
 .modal.active {
+  width: 100%;
+  z-index: 12;
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
 }
 
 .overlay.active {
   opacity: 1;
   visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+  padding: 90px 0px;
   transform: scale(1);
   transition: opacity 250ms linear;
+  pointer-events: all;
 }
 
 /* Стили для кнопки закрытия */
@@ -109,13 +108,22 @@
   cursor: pointer;
 }
 
-.first-header {
-  position: relative;
+.head-contact {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-header {
   width: 100%;
   background-color: var(--background-color);
+}
+
+.first-header {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .header-icon {
@@ -130,8 +138,6 @@
 
 .header-flex {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .header-li {
@@ -378,7 +384,12 @@
   margin: 0 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 25px;
@@ -514,7 +525,7 @@ li {
 }
 
 .hero-text {
-  font-size: 30pxpx;
+  font-size: 30px;
   line-height: 48px;
   align-items: center;
   text-align: right;
@@ -794,6 +805,16 @@ li {
 }
 
 @media screen and (max-width: 767px) {
+  .modal__title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .header-flex {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .topNubex {
     width: 50px;
     height: 50px;
@@ -912,6 +933,18 @@ li {
   }
 }
 @media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2);
+    max-width: 700px;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   .mobile__menu {
     justify-content: flex-end;
   }
@@ -963,6 +996,10 @@ li {
   }
 }
 @media screen and (min-width: 1366px) {
+  .modal {
+    max-width: 1000px;
+  }
+
   .menu__button {
     display: none;
   }
