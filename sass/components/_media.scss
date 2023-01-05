@@ -9,8 +9,8 @@
         width: 768px;
     }
 
-    @media screen and (min-width: 1366px) {
-        width: 1366px;
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
     }
 
 }
@@ -79,7 +79,7 @@ width: 50px;
     
 }
 }
-@media screen and (max-width: 1365px){
+@media screen and (max-width: 1199px){
     .header-li{
         padding: 20px 0;
     }
@@ -191,7 +191,7 @@ transform: translate(-50%, -50%) scale(1);
 
 
 
-@media screen and (min-width: 1366px){
+@media screen and (min-width: 1200px){
     // .modal__title {
     //         font-size: 20px;
     //         line-height: 1.4;
@@ -216,15 +216,15 @@ transform: translate(-50%, -50%) scale(1);
             }
     }
     .hero-title{
-        width: 700px;
-            font-size: 40px;
+        width: 600px;
+            font-size: 37px;
             line-height: 1.2;
             margin-left: auto;
             margin-right: 23px;
             padding: 95px 0px;
     }
           .hero-text {
-              font-size: 42px;
+              font-size: 37px;
             padding: 50px 38px;
              
           }
@@ -245,10 +245,10 @@ transform: translate(-50%, -50%) scale(1);
     .services-flex {
          display: flex;
          flex-wrap: wrap;
-         padding-bottom: 60px;
+         padding-bottom: 30px;
         }
     .services-title {
-         font-size: 50px;
+         font-size: 40px;
          line-height: 57px;
          text-align: center;
          text-decoration: underline;
@@ -256,7 +256,7 @@ transform: translate(-50%, -50%) scale(1);
         
         }
     .services-subtitle {
-        padding: 43px 0;
+        padding: 25px 0;
         font-size: 25px;
         line-height: 29px;
         text-align: center;
@@ -270,7 +270,7 @@ transform: translate(-50%, -50%) scale(1);
         .services {
             width: calc((100% - 2 * 60px) / 3);
             margin-right: 60px;
-            margin-bottom: 90px;
+            margin-bottom: 50px;
         }
 
    .services:nth-child(3n) {
@@ -283,7 +283,7 @@ transform: translate(-50%, -50%) scale(1);
 
     .serv-button {
        padding: 62px 0px;
-       width: 350px;
+       width: 330px;
        font-size: 25px;
        color: var(--color-white);
        text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.25);
@@ -301,7 +301,7 @@ transform: translate(-50%, -50%) scale(1);
          }
     .contact {
       padding-bottom: 20px;
-      font-size: 45px;
+      font-size: 37px;
       line-height: 52px;
       text-align: center;
       color: var(--main-text-color);
