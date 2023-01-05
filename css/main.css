@@ -392,7 +392,7 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--main-text-color);
 }
@@ -1083,6 +1083,8 @@ li {
 }
 @media screen and (min-width: 1200px) {
   .qr {
+    font-size: 18px;
+    text-align: center;
     bottom: 40px;
     right: 40px;
   }
